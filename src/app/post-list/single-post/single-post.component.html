@@ -1,0 +1,30 @@
+<li [ngClass]="{
+				'list-group-item': true,
+    			'list-group-item-success': loveIts >0,
+    			'list-group-item-danger': loveIts <0  
+ 				}">
+
+	<div id="titreEtDate">
+		<h2>{{title}}</h2>
+		{{ created_at }} <br><br>
+	</div>
+
+	<p>{{ content }} </p>
+	<br>
+	<button class="btn btn-success"
+			(click)="onLoveIt(post)">Love it!</button>
+	&nbsp;
+
+	<button class="btn btn-danger"
+			(click)="onDontLoveIt(post)">Don't love it!</button>
+
+	<span class="badge badge-primary badge-pill">{{ loveIts }}
+		&nbsp; 
+		<i class="fa fa-heart"></i>
+	</span>
+
+	&nbsp;
+
+	<button class="btn btn-primary"
+			(click)="onDeletePost(post)">Supprimer</button>
+</li> 
